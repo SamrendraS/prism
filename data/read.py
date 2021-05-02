@@ -49,7 +49,8 @@ def lemma_train_test_split(df, test_size=0.025):
 
 # TODO: Understand them
 def get_train_val_dfs_to_include(only_wic, on_colab=True):
-    WIC_PREFIX = COLAB_PREFIX + WIC_DATA if on_colab else WIC_DATA
+    # WIC_PREFIX = COLAB_PREFIX + WIC_DATA if on_colab else WIC_DATA
+    WIC_PREFIX = '/content/data'
 
     df_train_wic = read_data_wic(WIC_PREFIX + 'training/training.en-en.data', read_tags=True)
     df_dev_wic = read_data_wic(WIC_PREFIX + 'dev/multilingual/dev.en-en.data', read_tags=True)
