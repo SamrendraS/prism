@@ -52,18 +52,20 @@ def get_train_val_dfs_to_include(only_wic, on_colab=True):
     # WIC_PREFIX = COLAB_PREFIX + WIC_DATA if on_colab else WIC_DATA
     WIC_PREFIX = '/content/data'
 
-    df_train_wic = read_data_wic(WIC_PREFIX + 'training/training.en-en.data', read_tags=True)
-    df_dev_wic = read_data_wic(WIC_PREFIX + 'dev/multilingual/dev.en-en.data', read_tags=True)
+    # df_train_wic = read_data_wic(WIC_PREFIX + 'training/training.en-en.data', read_tags=True)
+    # df_dev_wic = read_data_wic(WIC_PREFIX + 'dev/multilingual/dev.en-en.data', read_tags=True)
 
-    dfs_to_include = [df_train_wic, df_dev_wic]
-    if only_wic:
-        return dfs_to_include
+    # dfs_to_include = [df_train_wic, df_dev_wic]
+    # if only_wic:
+    #     return dfs_to_include
 
-    SUPERGLUE_PREFIX = COLAB_PREFIX + SUPERGLUE_DATA if on_colab else SUPERGLUE_DATA
+    # SUPERGLUE_PREFIX = COLAB_PREFIX + SUPERGLUE_DATA if on_colab else SUPERGLUE_DATA
+    SUPERGLUE_PREFIX = '/content/data'
 
     df_train_superglue = read_data_superglue(SUPERGLUE_PREFIX + 'train/train.data.txt', read_tags=True)
     df_dev_superglue = read_data_superglue(SUPERGLUE_PREFIX + 'dev/dev.data.txt', read_tags=True)
-
+    
+    dfs_to_include = []
     dfs_to_include.append(df_train_superglue)
     dfs_to_include.append(df_dev_superglue)
 
