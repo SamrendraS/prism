@@ -3,7 +3,7 @@ from torch.utils.data import Dataset, RandomSampler, DataLoader
 from transformers import XLMRobertaTokenizerFast
 
 from prism.data.processing import get_ids, get_sentences, get_word_ranges, get_labels
-from prism.data.reading import get_train_val_test_df
+from prism.data.read import get_train_val_test_df
 from prism.data.constants import INDICES_PADDING_VALUE, INDICES_PADDING_LEN, MAX_TOKENS, BATCH_SIZE
 from prism.training.config import get_config
 

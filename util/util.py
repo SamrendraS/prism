@@ -4,7 +4,7 @@ import random
 import numpy as np
 from pytorch_lightning.metrics import Accuracy
 
-from src.data.constants import INDICES_PADDING_VALUE
+from prism.data.constants import INDICES_PADDING_VALUE
 
 
 def _find_nth_word_start_end_indices_in_sentence(sentence, n):

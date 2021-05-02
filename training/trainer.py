@@ -1,7 +1,7 @@
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import EarlyStopping
 
-from src.data.constants import EPOCHS
+from prism.data.constants import EPOCHS
 
 
 def get_trainer(on_colab=True):

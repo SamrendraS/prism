@@ -5,9 +5,9 @@ from pytorch_lightning.metrics import Accuracy
 from transformers import BertModel, XLMRobertaModel, AdamW, get_linear_schedule_with_warmup
 from torch import nn
 
-from src.util.util import get_tokens_embeddings
-from src.data.constants import TOTAL_STEPS
-from src.training.config import get_config
+from prism.util.util import get_tokens_embeddings
+from prism.data.constants import TOTAL_STEPS
+from prism.training.config import get_config
 
 
 class GeneralBertClassifier(LightningModule):
